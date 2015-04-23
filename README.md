@@ -28,5 +28,7 @@ You will find this (and all future) programming projects much easier if you take
 Wikipedia articles that may be of use:
 
 http://en.wikipedia.org/wiki/Cal_(Unix)
+
 http://en.wikipedia.org/wiki/Gregorian_calendar
+
 http://en.wikipedia.org/wiki/Zeller's_congruence
