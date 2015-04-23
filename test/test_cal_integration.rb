@@ -325,7 +325,20 @@ EOS
     assert_equal expected, output
   end
 
+  def test_century_non_leap_year
+    output = `./cal.rb 02 1900`
+    expected = <<EOS
+   February 1900
+Su Mo Tu We Th Fr Sa
+             1  2  3
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28
 
+EOS
+    assert_equal expected, output
+  end
 
 
 
@@ -341,17 +354,6 @@ end
 #
 # Tests needed
 #
-# > Error message
-# > one below the minimum
-# > one above the maximum
-# >  date entered as words
-# > date entered as year month
-# > Month that starts on a Sunday
-# > one test for each month
-# > minimum date (Jan 1800)
-# > maximum date (Dec 3000)
-# > Regular leap year (February leap year)
-# > century leap year
 #  400 year leap year
 #
 #
