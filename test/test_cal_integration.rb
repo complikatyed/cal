@@ -2,11 +2,20 @@ require_relative 'helper'
 
 class TestCalIntegration <Minitest::Test
 
-  def test_name_help_message
-    output = `./cheers`
+  def test_error_message
+    skip
+    output = `./cal.rb`
     expected = <<EOS
 Date not in acceptable format/range
 `./cal.rb [MM] [YYYY]
+      April 2015
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30
+
 EOS
     assert_equal expected, output
   end
@@ -22,6 +31,7 @@ Su Mo Tu We Th Fr Sa
 15 16 17 18 19 20 21
 22 23 24 25 26 27 28
 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -37,6 +47,7 @@ Su Mo Tu We Th Fr Sa
 11 12 13 14 15 16 17
 18 19 20 21 22 23 24
 25 26 27 28 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -52,6 +63,7 @@ Su Mo Tu We Th Fr Sa
 14 15 16 17 18 19 20
 21 22 23 24 25 26 27
 28
+
 EOS
     assert_equal expected, output
   end
@@ -66,6 +78,7 @@ Su Mo Tu We Th Fr Sa
 11 12 13 14 15 16 17
 18 19 20 21 22 23 24
 25 26 27 28 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -80,10 +93,10 @@ Su Mo Tu We Th Fr Sa
 14 15 16 17 18 19 20
 21 22 23 24 25 26 27
 28 29 30
+
 EOS
     assert_equal expected, output
   end
-
 
 
   def test_basic_May
@@ -96,6 +109,7 @@ Su Mo Tu We Th Fr Sa
 11 12 13 14 15 16 17
 18 19 20 21 22 23 24
 25 26 27 28 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -128,6 +142,7 @@ Su Mo Tu We Th Fr Sa
 13 14 15 16 17 18 19
 20 21 22 23 24 25 26
 27 28 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -143,6 +158,7 @@ Su Mo Tu We Th Fr Sa
 14 15 16 17 18 19 20
 21 22 23 24 25 26 27
 28 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -158,6 +174,7 @@ Su Mo Tu We Th Fr Sa
 11 12 13 14 15 16 17
 18 19 20 21 22 23 24
 25 26 27 28 29 30
+
 EOS
     assert_equal expected, output
   end
@@ -172,6 +189,7 @@ Su Mo Tu We Th Fr Sa
 13 14 15 16 17 18 19
 20 21 22 23 24 25 26
 27 28 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -201,6 +219,7 @@ Su Mo Tu We Th Fr Sa
 14 15 16 17 18 19 20
 21 22 23 24 25 26 27
 28 29 30 31
+
 EOS
     assert_equal expected, output
   end
@@ -212,11 +231,11 @@ end
 #
 # Tests needed
 #
-#  Month that starts on a Sunday
+# > Month that starts on a Sunday
 #  Regular leap year
 #  century leap year
 #  400 year leap year
-# > one test for each month
+# >rak one test for each month
 #  February leap year test
 #  minimum date (Jan 1800)
 #  maximum date (Dec 3000)
