@@ -13,7 +13,7 @@ EOS
 
 
   def test_too_high_for_range
-    output = `./cal.rb `
+    output = `./cal.rb 02 3001`
     expected = <<EOS
 Date not in acceptable format/range
 `./cal.rb [MM] [YYYY]
@@ -43,7 +43,7 @@ EOS
 
 
   def test_year_given_first
-    output = `./cal.rb 2015 April`
+    output = `./cal.rb 2015 04`
     expected = <<EOS
 Date not in acceptable format/range
 `./cal.rb [MM] [YYYY]
@@ -52,7 +52,7 @@ EOS
   end
 
 
-  def test_month_starts_on_Sunday
+  def test_month_starts_on_sunday
     output = `./cal.rb 01 2012`
     expected = <<EOS
     January 2012
@@ -68,7 +68,7 @@ EOS
   end
 
 
-  def test_basic_January
+  def test_basic_january
     output = `./cal.rb 01 1970`
     expected = <<EOS
     January 1970
@@ -84,7 +84,7 @@ EOS
   end
 
 
-  def test_basic_February
+  def test_basic_february
     output = `./cal.rb 02 1943`
     expected = <<EOS
    February 1943
@@ -100,7 +100,7 @@ EOS
   end
 
 
-  def test_basic_March
+  def test_basic_march
     output = `./cal.rb 03 1973`
     expected = <<EOS
      March 1973
@@ -116,7 +116,7 @@ EOS
   end
 
 
-  def test_basic_April
+  def test_basic_april
     output = `./cal.rb 04 2002`
     expected = <<EOS
      April 2002
@@ -132,7 +132,7 @@ EOS
   end
 
 
-  def test_basic_May
+  def test_basic_may
     output = `./cal.rb 05 1969`
     expected = <<EOS
       May 1969
@@ -149,7 +149,7 @@ EOS
 
 
 
-  def test_basic_June
+  def test_basic_june
     output = `./cal.rb 06 1974`
     expected = <<EOS
      June 1974
@@ -165,7 +165,7 @@ EOS
   end
 
 
-  def test_basic_July
+  def test_basic_july
     output = `./cal.rb 07 2092`
     expected = <<EOS
      July 2092
@@ -181,7 +181,7 @@ EOS
   end
 
 
-  def test_basic_August
+  def test_basic_august
     output = `./cal.rb 08 1966`
     expected = <<EOS
     August 1966
@@ -197,7 +197,7 @@ EOS
   end
 
 
-  def test_basic_September
+  def test_basic_september
     output = `./cal.rb 09 1898`
     expected = <<EOS
    September 1898
@@ -213,7 +213,7 @@ EOS
   end
 
 
-  def test_basic_October
+  def test_basic_october
     output = `./cal.rb 10 2999`
     expected = <<EOS
     October 2999
@@ -229,7 +229,7 @@ EOS
   end
 
 
-  def test_basic_November
+  def test_basic_november
     output = `./cal.rb 11 1800`
     expected = <<EOS
    November 1800
@@ -245,7 +245,7 @@ EOS
   end
 
 
-  def test_basic_December
+  def test_basic_december
     output = `./cal.rb 12 1941`
     expected = <<EOS
    December 1941
@@ -305,12 +305,11 @@ Su Mo Tu We Th Fr Sa
 28 29
 
 EOS
-# should there be an additional test for existence of day 29?
-    assert_equal expected, output
+   assert_equal expected, output
   end
 
 
-  def test_century_leap_year
+  def test_quad_century_leap_year
     output = `./cal.rb 02 2000`
     expected = <<EOS
    February 2000
