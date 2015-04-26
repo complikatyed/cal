@@ -1,5 +1,6 @@
 require_relative 'helper'
 require_relative '../lib/month'
+require_relative '../lib/zellers'
 
 class TestMonth <Minitest::Test
 

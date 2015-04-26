@@ -1,3 +1,5 @@
+require_relative '../lib/zellers'
+
 class Month
   attr_reader :month, :year
   
@@ -28,18 +30,22 @@ class Month
     end
   end
 
+  def template_30_1
+    <<EOS
+ 1  2  3  4  5  6  7
+ 8  9 10 11 12 13 14
+15 16 17 18 19 20 21
+22 23 24 25 26 27 28
+29 30
+EOS
+  end
 
   def to_s
     if days? == 30
     <<EOS
     #{name} #{year}
 #{week}
- 1  2  3  4  5  6  7
- 8  9 10 11 12 13 14
-15 16 17 18 19 20 21
-22 23 24 25 26 27 28
-29 30
-
+#{template_30_1}
 EOS
     elsif days? == 31
  <<EOS
@@ -52,9 +58,9 @@ EOS
 29 30 31
 
 EOS
-    elsif days? == 28 
+    elsif days? == 28
  <<EOS
-    #{name} #{year}
+   #{name} #{year}
 #{week}
  1  2  3  4  5  6  7
  8  9 10 11 12 13 14
@@ -65,7 +71,6 @@ EOS
     else
       puts "Oh no -- Leap Year!"
     end
-end
-
+  end
 
 end
