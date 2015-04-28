@@ -1,15 +1,17 @@
 class Zellers
   attr_accessor :month, :year
 
+  # using Zeller's convergence to calculate the start date of the month
+  # http://en.wikipedia.org/wiki/Zeller%27s_congruence
+
   def initialize(month, year)
     @month = month
     @year = year
   end
-
+ 
   def start
 
-    h = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    day = 1
+     day = 1
 
     if @month <= 2
       mo = @month + 12 + 1
@@ -19,6 +21,7 @@ class Zellers
       yr = year
     end
 
+    # Numbers in this section refer to Zeller's convergence
 
     p1 = ((26 * mo)/10)
     p2 = (day + yr)
@@ -27,14 +30,13 @@ class Zellers
     p5 = (yr/400)
     p6 = (p1 + p2 + p3 + p4 + p5)
 
-    puts day
-    puts mo
-    puts yr
-   
-
     first = p6 % 7
 
-    h[first.to_i]
+    if first == 0
+      first = 7
+    end
+
+    first = first
   end
-   
+
 end
