@@ -123,6 +123,4 @@ EOS
     assert_equal expected, m.to_s
   end
 
-
-  
 end
