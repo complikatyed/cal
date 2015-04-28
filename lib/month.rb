@@ -51,32 +51,19 @@ class Month
     range_start = 1
     output << date_header
     output << week_header
+
     weeks = (range_start..month_length).to_a
+
     wks = weeks.each_slice(7).to_a
 
-
-    wk1 = wks[0].map do |num|
-      num.to_s.rjust(2)
+    wks.each do |arr|
+      arr = arr.map do |num|
+        num.to_s.rjust(2)
+      end
+      arr = arr.join(' ').concat("\n")
+      output << arr
     end
-    wk1 = wk1.join(' ').concat("\n")
-    output << wk1
 
-    wk2 = wks[1].map do |num|
-      num.to_s.rjust(2)
-    end
-    wk2 = wk2.join(' ').concat("\n")
-    output << wk2
-
-    wk3 = wks[2].join(' ').concat("\n")
-    output << wk3
-
-
-    wk4 = wks[3].join(' ').concat("\n")
-    output << wk4
-
-
-    wk5 = wks[4].join(' ').concat("\n")
-    output << wk5
     output << "\n"
     output
   end
