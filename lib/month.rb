@@ -1,28 +1,29 @@
 require_relative '../lib/zellers'
 
 class Month
-  attr_reader :month, :year, :z, :start, :str1
-  
+  attr_reader :month, :year, :z, :start
+  WIDTH = 20
+
   def initialize(month, year)
-    @month = month
-    @year = year
+    @month = month.to_i
+    @year = year.to_i
   end
 
   def z
-    z = Zellers.new(month,year)
+    z = Zellers.new(month, year)
   end
 
   def name
-    names = ["January", "February", "March", "April", "  May", " June", " July", "August", "September", "October", "November", "December"]
+    names = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     names.at(@month -1)
   end
 
   def date_header
-    "#{name} #{year}".center(20).concat("\n")
+    "#{name} #{year}".center(WIDTH).rstrip.concat("\n")
   end
 
   def week_header
-    "Su Mo Tu We Th Fr Sa".center(20).concat("\n")
+    "Su Mo Tu We Th Fr Sa".concat("\n")
   end
 
 
@@ -44,63 +45,41 @@ class Month
   end
 
 
-  def week_start
-   week_start = z.start
-  end
-
-#  def weeks
-    #weeks = []
-    #weeks = (1..days).each_slice(7)
-    #puts weeks
-  #end
-
-
-#  def to_s
-
-  #output = ""
-  #output << "#{date_header} #{week_header}"
-  #arr = (1..days).to_a
-  #arr.each_slice(7) do |arr|
-      #output << "#{arr}"
-  #end
-  #output
-
-  #end
-
   def to_s
+
     output = ""
-    output << "#{date_header} #{week_header}"
-    weeks = (1..month_length).to_a
+    range_start = 1
+    output << date_header
+    output << week_header
+    weeks = (range_start..month_length).to_a
     wks = weeks.each_slice(7).to_a
 
-    wk1 = wks[0].to_s.gsub(/\D/, ' ')
-    wk1 = wk1.to_s.split.join(' ').rjust(20, ' ').concat("\n")
+
+    wk1 = wks[0].map do |num|
+      num.to_s.rjust(2)
+    end
+    wk1 = wk1.join(' ').concat("\n")
     output << wk1
 
-    wk2 = wks[1].to_s.gsub(/\D/, ' ')
-    wk2 = wk2.to_s.split.join(' ').rjust(20).concat("\n")
+    wk2 = wks[1].map do |num|
+      num.to_s.rjust(2)
+    end
+    wk2 = wk2.join(' ').concat("\n")
     output << wk2
 
-    wk3 = wks[2].to_s.gsub(/\D/, ' ')
-    wk3 = wk3.to_s.split.join(' ').concat("\n")
+    wk3 = wks[2].join(' ').concat("\n")
     output << wk3
 
 
-    wk4 = wks[3].to_s.gsub(/\D/, ' ')
-    wk4 = wk4.to_s.split.join(' ').concat("\n")
+    wk4 = wks[3].join(' ').concat("\n")
     output << wk4
 
 
-    wk5 = wks[4].to_s.gsub(/\D/, ' ')
-    wk5 = wk5.to_s.split.join(' ').concat("\n \n")
+    wk5 = wks[4].join(' ').concat("\n")
     output << wk5
-
+    output << "\n"
     output
   end
 
 
 end
-
-
-
-
