@@ -64,7 +64,7 @@ EOS
   def test_to_s_on_mar_2009
     m = Month.new(03, 2009)
     expected = <<EOS
-    March 2009
+     March 2009
 Su Mo Tu We Th Fr Sa
  1  2  3  4  5  6  7
  8  9 10 11 12 13 14
@@ -124,3 +124,4 @@ EOS
   end
 
 end
+
