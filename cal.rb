@@ -8,5 +8,6 @@ year = ARGV[1]
 
 
 m = Month.new(month, year)
+z = Zellers.new(month, year)
 puts m.to_s
 
