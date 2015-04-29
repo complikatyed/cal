@@ -26,7 +26,6 @@ class Month
     "Su Mo Tu We Th Fr Sa".concat("\n")
   end
 
-
   def month_length
     thirty_days = [9, 4, 6, 11]
     thirty_one_days = [1, 3, 5, 7, 8, 10, 12]
@@ -44,15 +43,17 @@ class Month
     end
   end
 
-
+ 
   def to_s
 
     output = ""
-    range_start = 1
     output << date_header
     output << week_header
 
-    weeks = (range_start..month_length).to_a
+    weeks = (1..month_length).to_a
+
+    
+    (z.start - 1).times {weeks.unshift("  ")}
 
     wks = weeks.each_slice(7).to_a
 
