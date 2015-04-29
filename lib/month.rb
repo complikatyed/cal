@@ -43,7 +43,7 @@ class Month
     end
   end
 
- 
+
   def to_s
 
     output = ""
@@ -52,7 +52,6 @@ class Month
 
     weeks = (1..month_length).to_a
 
-    
     (z.start - 1).times {weeks.unshift("  ")}
 
     wks = weeks.each_slice(7).to_a

@@ -95,6 +95,7 @@ EOS
 
 
   def test_to_s_sunday_start
+    skip
     m = Month.new(02, 2015)
     expected = <<EOS
    February 2015
@@ -200,7 +201,7 @@ Su Mo Tu We Th Fr Sa
 
 EOS
     assert_equal expected, m.to_s
-  end  
+  end
 
 
 
