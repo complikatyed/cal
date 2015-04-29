@@ -1,7 +1,7 @@
 require_relative '../lib/zellers'
 
 class Month
-  attr_reader :month, :year, :z, :start
+  attr_reader :month, :year
   WIDTH = 20
 
   def initialize(month, year)
