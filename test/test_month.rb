@@ -95,7 +95,6 @@ EOS
 
 
   def test_to_s_sunday_start
-    skip
     m = Month.new(02, 2015)
     expected = <<EOS
    February 2015
