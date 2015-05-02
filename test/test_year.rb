@@ -1,13 +1,14 @@
 require_relative 'helper'
-require_relative 'lib/month'
-require_relative 'lib/year'
-require_relative 'lib/zellers'
+require_relative '../lib/month'
+require_relative '../lib/year'
+require_relative '../lib/zellers'
 
 
 class TestYear <Minitest::Test
 
 
   def test_year_outside_range_low
+    skip
     y = Year.new(1799)
     expected = <<EOS
 Date not in acceptable range
@@ -17,8 +18,8 @@ EOS
     assert_equal expected,y.to_s
   end
 
-  
   def test_year_outside_range_high
+    skip
     y = Year.new(3020)
     expected = <<EOS
 Date not in acceptable range
@@ -30,6 +31,7 @@ EOS
 
 
   def test_year_prints_all_months_1801
+    skip
     y = Year.new(1801)
     expected = <<EOS
                              1801
@@ -72,6 +74,7 @@ EOS
 
 
   def test_year_at_top_limit_of_cal
+    skip
     y = Year.new(3000)
     expected = <<EOS
                              3000
@@ -114,6 +117,7 @@ EOS
 
 
   def test_quad_leap_year_2400
+    skip
     y = Year.new(2400)
     expected = <<EOS
                              2400
@@ -156,6 +160,7 @@ EOS
 
 
   def test_normal_leap_year_1848
+    skip
     y = Year.new(2400)
     expected = <<EOS
                              1848

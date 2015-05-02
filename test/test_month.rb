@@ -13,19 +13,19 @@ class TestMonth <Minitest::Test
 
   def test_name_for_march
     m = Month.new(03, 2009)
-    assert_equal m.name, "March"
+    assert_equal m.month_name, "March"
   end
 
 
   def test_name_for_January
     m = Month.new(01, 2009)
-    assert_equal m.name, "January"
+    assert_equal m.month_name, "January"
   end
 
 
   def test_name_for_December
     m = Month.new(12, 2009)
-    assert_equal m.name, "December"
+    assert_equal m.month_name, "December"
   end
 
 
@@ -104,6 +104,7 @@ Su Mo Tu We Th Fr Sa
 15 16 17 18 19 20 21
 22 23 24 25 26 27 28
 
+
 EOS
     assert_equal expected, m.to_s
   end
@@ -119,7 +120,6 @@ Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22
 23 24 25 26 27 28 29
 30
-
 EOS
     assert_equal expected, m.to_s
   end
@@ -136,7 +136,6 @@ Su Mo Tu We Th Fr Sa
 17 18 19 20 21 22 23
 24 25 26 27 28 29 30
 31
-
 EOS
     assert_equal expected, m.to_s
   end

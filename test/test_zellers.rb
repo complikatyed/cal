@@ -33,7 +33,7 @@ class TestZellers <Minitest::Test
     z = Zellers.new(12, 1995)
     assert_equal 6, z.start
   end
-  
+
   def test_start_day_for_feb_2014
     z = Zellers.new(02, 2014)
     assert_equal 7, z.start
