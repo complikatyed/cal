@@ -4,34 +4,21 @@ class TestCalIntegration <Minitest::Test
 
   def test_error_message
     output = `./cal.rb`
-    expected = <<EOS
-Date not in acceptable format/range
-`./cal.rb [MM] [YYYY]`
-
-EOS
+    expected = "Date not in acceptable format/range\n"
     assert_equal expected, output
   end
 
 
   def test_too_high_for_range
     output = `./cal.rb 02 3001`
-    expected = <<EOS
-Date not in acceptable format/range
-`./cal.rb [MM] [YYYY]`
-
-EOS
+    expected = "Date not in acceptable format/range\n"
     assert_equal expected, output
   end
 
 
   def test_too_low_for_range
     output = `./cal.rb 07 1789`
-    expected = <<EOS
-Date not in acceptable format/range
-`./cal.rb [MM] [YYYY]`
-
-EOS
-
+    expected = "Date not in acceptable format/range\n"
     assert_equal expected, output
   end
 
@@ -39,24 +26,14 @@ EOS
   def test_date_not_in_numbers
     skip
     output = `./cal.rb April 2015`
-    expected =<<EOS
-Date not in acceptable format/range
-`./cal.rb [MM] [YYYY]`
-
-EOS
-
+    expected = "Date not in acceptable format/range\n"
     assert_equal expected, output
   end
 
 
   def test_year_given_first
     output = `./cal.rb 2015 04`
-    expected = <<EOS
-Date not in acceptable format/range
-`./cal.rb [MM] [YYYY]`
-
-EOS
-
+    expected = "Date not in acceptable format/range\n"
     assert_equal expected, output
   end
 
@@ -169,7 +146,6 @@ Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22
 23 24 25 26 27 28 29
 30
-
 EOS
     assert_equal expected, output
   end
@@ -250,7 +226,6 @@ Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22
 23 24 25 26 27 28 29
 30
-
 EOS
     assert_equal expected, output
   end
