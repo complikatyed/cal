@@ -3,7 +3,7 @@ require_relative '../lib/zellers'
 
 
 class Year
-  attr_reader :month, :year
+  attr_accessor :month, :year
   YEAR_WIDTH = 64
   MONTH_WIDTH = 20
 
@@ -11,36 +11,59 @@ class Year
     @year = year.to_i
   end
 
-  def date_header
-    "#{month_name} #{year}".center(MONTH_WIDTH).rstrip.concat("\n")
-  end
-
-
   def year_header
     "#{year}".center(YEAR_WIDTH).rstrip.concat("\n")
   end
 
-
-  def to_s
-
+  def method(year, month)
     m = Month.new(month, year)
+    m.to_s
+  end
+
+  def month_name
+    names = [ nil,
+             "January",
+             "February",
+             "March",
+             "April",
+             "May",
+             "June",
+             "July",
+             "August",
+             "September",
+             "October",
+             "November",
+             "December"]
+    names.at(@month)
+  end
+
+   def make_months
     output = ""
 
-    12.times do |i|
-      month = i + 1
-      string = m.to_s(month, year)
-      if month % 3 == 0
-        string << "\n"
-      else
-        string << "  "
-      end
+    12.times do |month|
+      month = month + 1
+      string = method(month, year)
       output << string
     end
-
     output
+  end
 
+   def to_s
+     months = []
+
+     months = make_months.split(",")
+#     month_lines. each do |line|
+       #line.to_s.rjust(22)
+     #end
+
+     #lines = month_lines.each_slice(64).to_a
+
+     #lines.each do |arr|
+       #arr = month_lines.concat("\n")
+      #months << arr
+     #end
+     #months
    end
-
 
 end
 
