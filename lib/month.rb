@@ -9,17 +9,9 @@ class Month
     @year = year.to_i
   end
 
-  def input_error_message
-    <<EOS
-Date not in acceptable format/range
-`./cal.rb [MM] [YYYY]
-EOS
-  end
-
-
-
-  def name
-    names = ["January",
+  def month_name
+    names = [ nil,
+             "January",
              "February",
              "March",
              "April",
@@ -31,24 +23,24 @@ EOS
              "October",
              "November",
              "December"]
-    names.at(@month - 1)
+    names.at(@month)
   end
 
 
-  def leap
+  def leap_year
 
     if @year % 100 === 0 && @year % 400 === 0
-      leap = true
+      leap_year = true
     elsif @year % 4 === 0 && @year % 100 != 0
-      leap = true
+      leap_year = true
     else
-      leap = false
+      leap_year = false
     end
   end
 
 
   def date_header
-    "#{name} #{year}".center(MONTH_WIDTH).rstrip.concat("\n")
+    "#{month_name} #{year}".center(MONTH_WIDTH).rstrip.concat("\n")
   end
 
   def week_header
@@ -56,13 +48,13 @@ EOS
   end
 
   def month_length
-    thirty_days = [9, 4, 6, 11]
+    thirty_day_months = [9, 4, 6, 11]
 
-    if month == 2 and leap
+    if month == 2 and leap_year
       29
-    elsif month == 2 and !leap
+    elsif month == 2 and !leap_year
       28
-    elsif thirty_days.include? month
+    elsif thirty_day_months.include? month
       30
     else
       31
@@ -87,13 +79,23 @@ EOS
       arr = arr.map do |num|
         num.to_s.rjust(2)
       end
-      arr = arr.join(' ').concat("\n")
+      arr = arr.join(' ')
+      until arr.length == 20
+        arr << " "
+      end
+      arr.concat("\n")
       output << arr
     end
 
-    output << "\n"
+    until output.lines.count === 8
+      output << "                    \n"
+    end
+
     output
+
   end
 
-
 end
+
+
+
