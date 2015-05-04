@@ -138,5 +138,3 @@ class Year
    end
 
 end
-
-
