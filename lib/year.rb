@@ -31,36 +31,24 @@ class Year
     output
   end
 
-   def year_setup
+   def cal_year_setup
     months = ""
     months = make_months
-    year = ""
+    cal_year = ""
 
     weekdays_row = "Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa\n"
-    months_1to3 = "      January               February               March\n"
-    months_4to6 = "      April                  May                   June\n"
-    months_7to9 = "        July                 August              September\n"
-    months_10to12 = "      October               November              December\n"
+    months_1to3 = "      January               February               March        \n"
+    months_4to6 = "       April                  May                   June        \n"
+    months_7to9 = "        July                 August              September      \n"
+    months_10to12 = "      October               November              December      \n"
 
-    row_13 = ""
-    row_14 = ""
-    row_15 = ""
-    row_16 = ""
-    row_17 = ""
-    row_18 = ""
-    row_19 = ""
-    row_20 = ""
-    row_21 = ""
-    row_22 = ""
-    row_23 = ""
-    row_24 = ""
 
     row_1 = "#{months[37..57].gsub(/\n/, '')}  #{months[202..222].gsub(/\n/, '')}  #{months[365..385]}"
     row_2 = "#{months[58..78].gsub(/\n/, '')}  #{months[223..243].gsub(/\n/, '')}  #{months[386..406]}"
     row_3 = "#{months[79..99].gsub(/\n/, '')}  #{months[244..264].gsub(/\n/, '')}  #{months[407..427]}"
     row_4 = "#{months[100..120].gsub(/\n/, '')}  #{months[265..285].gsub(/\n/, '')}  #{months[428..448]}"
     row_5 = "#{months[121..141].gsub(/\n/, '')}  #{months[286..306].gsub(/\n/, '')}  #{months[449..469]}"
-    row_6 = "#{months[142..162].gsub(/\n/, '')}  #{months[307..327].gsub(/\n/, '')}  #{months[470..491]}"
+    row_6 = "#{months[142..162].gsub(/\n/, '')}  #{months[307..327].gsub(/\n/, '')}  #{months[470..490]}"
 
     row_7 = "#{months[528..548].gsub(/\n/, '')}  #{months[690..710].gsub(/\n/, '')}  #{months[852..872]}"
     row_8 = "#{months[549..569].gsub(/\n/, '')}  #{months[711..731].gsub(/\n/, '')}  #{months[873..893]}"
@@ -84,25 +72,27 @@ class Year
     row_24 = "#{months[1611..1631].gsub(/\n/, '')}  #{months[1774..1794].gsub(/\n/, '')}  #{months[1939..1959]}"
 
 
-    year << year_header.concat("\n")
-    year << months_1to3
-    year << weekdays_row
-    year << row_1 << row_2 << row_3 << row_4 << row_5 << row_6
-    year << months_4to6
-    year << weekdays_row
-    year << row_7 << row_8 << row_9 << row_10 << row_11 << row_12
-    year << months_7to9
-    year << weekdays_row
-    year << row_13 << row_14 << row_15 << row_16 << row_17 << row_18
-    year << months_10to12
-    year << weekdays_row
-    year << row_19 << row_20 << row_21 << row_22 << row_23 << row_24
+    cal_year << year_header.concat("\n")
+    cal_year << months_1to3
+    cal_year << weekdays_row
+    cal_year << row_1 << row_2 << row_3 << row_4 << row_5 << row_6
+    cal_year << months_4to6
+    cal_year << weekdays_row
+    cal_year << row_7 << row_8 << row_9 << row_10 << row_11 << row_12
+    cal_year << months_7to9
+    cal_year << weekdays_row
+    cal_year << row_13 << row_14 << row_15 << row_16 << row_17 << row_18
+    cal_year << months_10to12
+    cal_year << weekdays_row
+    cal_year << row_19 << row_20 << row_21 << row_22 << row_23 << row_24
    end
 
    def to_s
-    year = ""
-    year = year_setup
+    cal_year = ""
+    cal_year = cal_year_setup
 
    end
 
 end
+
+

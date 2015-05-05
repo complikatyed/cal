@@ -12,7 +12,7 @@ class TestYear <Minitest::Test
     expected = <<EOS
                              1801
 
-      January               February               March
+      January               February               March        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
              1  2  3   1  2  3  4  5  6  7   1  2  3  4  5  6  7
  4  5  6  7  8  9 10   8  9 10 11 12 13 14   8  9 10 11 12 13 14
@@ -20,7 +20,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 18 19 20 21 22 23 24  22 23 24 25 26 27 28  22 23 24 25 26 27 28
 25 26 27 28 29 30 31                        29 30 31            
                                                                 
-       April                  May                   June
+       April                  May                   June        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
           1  2  3  4                  1  2      1  2  3  4  5  6
  5  6  7  8  9 10 11   3  4  5  6  7  8  9   7  8  9 10 11 12 13
@@ -28,7 +28,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 19 20 21 22 23 24 25  17 18 19 20 21 22 23  21 22 23 24 25 26 27
 26 27 28 29 30        24 25 26 27 28 29 30  28 29 30            
                       31                                        
-        July                 August              September
+        July                 August              September      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
           1  2  3  4                     1         1  2  3  4  5
  5  6  7  8  9 10 11   2  3  4  5  6  7  8   6  7  8  9 10 11 12
@@ -36,7 +36,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 19 20 21 22 23 24 25  16 17 18 19 20 21 22  20 21 22 23 24 25 26
 26 27 28 29 30 31     23 24 25 26 27 28 29  27 28 29 30         
                       30 31                                     
-      October               November              December
+      October               November              December      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
              1  2  3   1  2  3  4  5  6  7         1  2  3  4  5
  4  5  6  7  8  9 10   8  9 10 11 12 13 14   6  7  8  9 10 11 12
@@ -54,7 +54,7 @@ EOS
     expected = <<EOS
                              3000
 
-      January               February               March
+      January               February               March        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
           1  2  3  4                     1                     1
  5  6  7  8  9 10 11   2  3  4  5  6  7  8   2  3  4  5  6  7  8
@@ -62,7 +62,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 19 20 21 22 23 24 25  16 17 18 19 20 21 22  16 17 18 19 20 21 22
 26 27 28 29 30 31     23 24 25 26 27 28     23 24 25 26 27 28 29
                                             30 31               
-       April                  May                   June
+       April                  May                   June        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
        1  2  3  4  5               1  2  3   1  2  3  4  5  6  7
  6  7  8  9 10 11 12   4  5  6  7  8  9 10   8  9 10 11 12 13 14
@@ -70,7 +70,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 20 21 22 23 24 25 26  18 19 20 21 22 23 24  22 23 24 25 26 27 28
 27 28 29 30           25 26 27 28 29 30 31  29 30               
                                                                 
-        July                 August              September
+        July                 August              September      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
        1  2  3  4  5                  1  2      1  2  3  4  5  6
  6  7  8  9 10 11 12   3  4  5  6  7  8  9   7  8  9 10 11 12 13
@@ -78,7 +78,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 20 21 22 23 24 25 26  17 18 19 20 21 22 23  21 22 23 24 25 26 27
 27 28 29 30 31        24 25 26 27 28 29 30  28 29 30            
                       31                                        
-      October               November              December
+      October               November              December      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
           1  2  3  4                     1      1  2  3  4  5  6
  5  6  7  8  9 10 11   2  3  4  5  6  7  8   7  8  9 10 11 12 13
@@ -96,7 +96,7 @@ EOS
     expected = <<EOS
                              2400
 
-      January               February               March
+      January               February               March        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                    1         1  2  3  4  5            1  2  3  4
  2  3  4  5  6  7  8   6  7  8  9 10 11 12   5  6  7  8  9 10 11
@@ -104,7 +104,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22  20 21 22 23 24 25 26  19 20 21 22 23 24 25
 23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31   
 30 31                                                           
-       April                  May                   June
+       April                  May                   June        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                    1      1  2  3  4  5  6               1  2  3
  2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10
@@ -112,7 +112,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24
 23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30   
 30                                                              
-        July                 August              September
+        July                 August              September      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                    1         1  2  3  4  5                  1  2
  2  3  4  5  6  7  8   6  7  8  9 10 11 12   3  4  5  6  7  8  9
@@ -120,7 +120,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22  20 21 22 23 24 25 26  17 18 19 20 21 22 23
 23 24 25 26 27 28 29  27 28 29 30 31        24 25 26 27 28 29 30
 30 31                                                           
-      October               November              December
+      October               November              December      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
  1  2  3  4  5  6  7            1  2  3  4                  1  2
  8  9 10 11 12 13 14   5  6  7  8  9 10 11   3  4  5  6  7  8  9
@@ -138,7 +138,7 @@ EOS
     expected = <<EOS
                              1848
 
-      January               February               March
+      January               February               March        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                    1         1  2  3  4  5            1  2  3  4
  2  3  4  5  6  7  8   6  7  8  9 10 11 12   5  6  7  8  9 10 11
@@ -146,7 +146,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22  20 21 22 23 24 25 26  19 20 21 22 23 24 25
 23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31   
 30 31                                                           
-       April                  May                   June
+       April                  May                   June        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                    1      1  2  3  4  5  6               1  2  3
  2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10
@@ -154,7 +154,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24
 23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30   
 30                                                              
-        July                 August              September
+        July                 August              September      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                    1         1  2  3  4  5                  1  2
  2  3  4  5  6  7  8   6  7  8  9 10 11 12   3  4  5  6  7  8  9
@@ -162,7 +162,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 16 17 18 19 20 21 22  20 21 22 23 24 25 26  17 18 19 20 21 22 23
 23 24 25 26 27 28 29  27 28 29 30 31        24 25 26 27 28 29 30
 30 31                                                           
-      October               November              December
+      October               November              December      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
  1  2  3  4  5  6  7            1  2  3  4                  1  2
  8  9 10 11 12 13 14   5  6  7  8  9 10 11   3  4  5  6  7  8  9
@@ -180,7 +180,7 @@ EOS
     expected = <<EOS
                              1900
 
-      January               February               March
+      January               February               March        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
     1  2  3  4  5  6               1  2  3               1  2  3
  7  8  9 10 11 12 13   4  5  6  7  8  9 10   4  5  6  7  8  9 10
@@ -188,7 +188,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 21 22 23 24 25 26 27  18 19 20 21 22 23 24  18 19 20 21 22 23 24
 28 29 30 31           25 26 27 28           25 26 27 28 29 30 31
                                                                 
-       April                  May                   June
+       April                  May                   June        
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
  1  2  3  4  5  6  7         1  2  3  4  5                  1  2
  8  9 10 11 12 13 14   6  7  8  9 10 11 12   3  4  5  6  7  8  9
@@ -196,7 +196,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 22 23 24 25 26 27 28  20 21 22 23 24 25 26  17 18 19 20 21 22 23
 29 30                 27 28 29 30 31        24 25 26 27 28 29 30
                                                                 
-        July                 August              September
+        July                 August              September      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
  1  2  3  4  5  6  7            1  2  3  4                     1
  8  9 10 11 12 13 14   5  6  7  8  9 10 11   2  3  4  5  6  7  8
@@ -204,7 +204,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 22 23 24 25 26 27 28  19 20 21 22 23 24 25  16 17 18 19 20 21 22
 29 30 31              26 27 28 29 30 31     23 24 25 26 27 28 29
                                             30                  
-      October               November              December
+      October               November              December      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
     1  2  3  4  5  6               1  2  3                     1
  7  8  9 10 11 12 13   4  5  6  7  8  9 10   2  3  4  5  6  7  8
